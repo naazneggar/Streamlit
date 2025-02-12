@@ -16,7 +16,7 @@ page=st.sidebar.radio("Select Model",options=["PerCapitaIncome","HOUSE"])
 if page=="PerCapitaIncome":
     st.title('Per capita income of canada')
     st.write('This is a simple web_app to predict the per capita income of canada')
-    area=st.slider("area",0,1000)
+   
 
     year=st.number_input('Enter the year',min_value=100)
     prediction=model1.predict([[year]])
