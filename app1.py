@@ -20,8 +20,9 @@ if page=="PerCapitaIncome":
 
     year=st.number_input('Enter the year',min_value=100)
     prediction=model1.predict([[year]])
+    prediction=pd.Series(prediction)
     if st.button('Predict'):
-        st.write('The per capita income of canada in the year',year,'is',prediction[0])
+        st.success('The per capita income of canada in the year',year,'is',prediction[0])
 else:
     st.title('House Price Prediction')
     st.write('This is a simple web_app to predict the House price')
